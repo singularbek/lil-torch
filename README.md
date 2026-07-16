@@ -1,6 +1,6 @@
 # lil_torch
 
-A minimal PyTorch-inspired deep learning library built in Python. I wanted to implement the main components of PyTorch to better appreciate and understand how they work.
+A minimal PyTorch-inspired deep learning library built in Python. I wanted to implement the main components of PyTorch to better appreciate and understand how they work. The APIs look like PyTorch's as well. So for example, the lil_torch analog of torch.autograd.Function is lil_torch.autograd.Function.
 
 ## What’s implemented so far
 
@@ -12,7 +12,7 @@ A minimal PyTorch-inspired deep learning library built in Python. I wanted to im
 ## Project structure
 
 - `lil_torch/tensor.py` — `Tensor` class and tensor utilities
-- `lil_torch/autograd/function.py` — base autograd `Function` class and gradient plumbing
+- `lil_torch/autograd/function.py` — base autograd `Function` class
 - `lil_torch/autograd/ops_builtins.py` — built-in differentiable operations
 - `lil_torch/optim/optimizer.py` — optimizer base class and parameter handling
 - `lil_torch/optim/optimizers.py` — `SGD` optimizer implementation
@@ -63,9 +63,7 @@ optimizer.step()
 
 Remaining pieces planned for future implementation:
 
-- `nn.Module`
-- `nn.Linear`
-- `nn.Tanh`
+- Neural Networks API - `nn.Module`,`nn.Linear`,`nn.Tanh`
 - Additional layer and activation support
 - Loss functions (like MSE and CrossEntropy) and training utilities
 - More optimizer algorithms (like Adam)
